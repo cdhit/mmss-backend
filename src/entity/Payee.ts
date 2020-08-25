@@ -7,7 +7,7 @@ import { getOrmManager } from '../db/ormManager';
 @Unique(['name', 'ledger', 'deletedAt'])
 @Entity()
 export class Payee extends BaseClass {
-  @Index({unique: true})
+  @Index({unique: false})
   @Column({
     length: 256,
     nullable: false,

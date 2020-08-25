@@ -14,7 +14,7 @@ export interface ICurrency {
 @Unique(['name', 'ledger', 'deletedAt'])
 @Entity()
 export class Account extends BaseClass {
-  @Index({unique: true})
+  @Index({unique: false})
   @Column({
     length: 256,
     nullable: false,
