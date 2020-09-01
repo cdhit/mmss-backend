@@ -1,7 +1,11 @@
 {
-   "type": "sqlite",
-   "database": "database.sqlite",
-   "synchronize": false,
+   "type": "postgres",
+   "host": "localhost",
+   "port": 5433,
+   "username": "postgres",
+   "password": "123456",
+   "database": "mmcloud3",
+   "synchronize": true,
    "logging": false,
    "entities": [
       "src/entity/**/*.ts"

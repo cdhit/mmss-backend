@@ -15,10 +15,15 @@ if (process.env.JEST_TESTING === 'true') {
   // in production
   Object.assign(ormconfig, {
     type: "postgres",
-    url: process.env.DATABASE_URL,
+    host: "ec2-3-215-207-12.compute-1.amazonaws.com",
+    port: 5432,
+    database: "d1higk9unvahg0",
+    username: "urhmeqrwhebjfl",
+    password: "c2cd8b30efe26d72d0bac69012055f4b69cd5decd664ec0d52f069db11c5892b",
     synchronize: true,
-    logging: false,
-    ssl: true,
+    logging: true,
+    //url: "postgres://urhmeqrwhebjfl:c2cd8b30efe26d72d0bac69012055f4b69cd5decd664ec0d52f069db11c5892b@ec2-3-215-207-12.compute-1.amazonaws.com:5432/d1higk9unvahg0",
+    //ssl: true,
 
     // for building server, the entities under dist are required
     entities: [
